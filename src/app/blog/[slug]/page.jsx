@@ -17,8 +17,10 @@ const getData = async (slug) => {
 
 export const generateMetadata = async ({ params }) => {
   const { slug } = params;
+  console.log({ slug });
 
   const post = await getPost(slug);
+  console.log({ post });
 
   return {
     title: post.title,
